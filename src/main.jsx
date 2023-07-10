@@ -9,30 +9,38 @@ import {
   useRouteError,
 } from "react-router-dom";
 import "./index.css";
+import Product from "./router/products/product.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <Error />,
-  },
-  {
-    path: "/locations",
-    element: <WrapperProducts />,
-  },
-  {
-    path: "/about",
-    element: <h2>about</h2>,
-  },
+    children: [
+      {
+        path: "/locations",
+        element: <WrapperProducts />,
+      },
+      {
+        path: "/locations/:id",
+        element: <Product />,
+      },
+      {
+        path: "/about",
+        element: <h2>about</h2>,
+      },
 
-  {
-    path: "/product/:id",
-    element: <h2>qui singola carta</h2>,
+      {
+        path: "/product",
+        element: <h2>qui singola carta</h2>,
+      },
+      {
+        path: "/contacts",
+        element: <h2>contattaciii</h2>,
+      },
+    ],
   },
-  {
-    path: "/contacts",
-    element: <h2>contattaciii</h2>,
-  },
+  ,
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
