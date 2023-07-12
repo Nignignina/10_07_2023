@@ -1,0 +1,15 @@
+:root {
+  max-width: 1460px;
+  margin: 0 auto;
+
+  padding: 0;
+  text-align: center;
+}
+
+.Defaultlayout {
+  @include display(flex);
+  flex-direction: column;
+  @include just-ali(center, center);
+  max-width: 1460px;
+  background-color: aquamarine;
+}

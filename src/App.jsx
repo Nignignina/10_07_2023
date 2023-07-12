@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./App.module.scss";
 import Navbar from "./Componets/Navbar";
 
 import "./App.css";
@@ -8,10 +9,7 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <div className="Navbar"> Sono una navbar</div>
-        <Navbar />
-      </div>
+      <div className={styles.App}></div>
     </>
   );
 }

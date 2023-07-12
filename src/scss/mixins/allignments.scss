@@ -1,0 +1,22 @@
+@mixin display($value) {
+  display: $value;
+}
+
+@mixin just-ali($justify, $align) {
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin set-Position($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+}
+
+// MARGINS - PADDING
+
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}

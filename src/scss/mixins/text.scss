@@ -1,0 +1,10 @@
+@mixin menuUL($display, $gap) {
+  display: $display;
+  gap: $gap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    text-decoration: none;
+  }
+}

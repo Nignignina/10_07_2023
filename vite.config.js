@@ -9,7 +9,8 @@ export default defineConfig({
       scss: {
         additionalData: `
 
-        @import "./src/scss/all.scss";`,
+        @import "./src/scss/all.scss";
+        @import "./src/scss/mixins/allmixins.scss";`,
       },
     },
   },

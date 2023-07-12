@@ -1,0 +1,14 @@
+.WrapperProduct {
+  overflow-x: scroll;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(213, 34, 34);
+  width: 400px;
+}
+.product {
+  @include display(flex);
+  @include just-ali(center, center);
+  background-color: aqua;
+  width: 400px;
+}

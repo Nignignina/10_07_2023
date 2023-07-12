@@ -1,0 +1,25 @@
+.Login {
+  padding: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(247, 247, 247);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__input {
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+
+    &:hover {
+      scale: 1.1;
+      border: 2px solid rgb(45, 255, 195);
+    }
+  }
+}

@@ -1,28 +1,40 @@
 import styles from "./Navbar.module.scss";
 import { Link, Outlet } from "react-router-dom";
+import { AiTwotoneHome } from "react-icons/ai";
 
 const Navbar = () => {
   return (
     <>
       <nav className={styles.Navbar}>
-        <div className={styles.Navbar_logo}> LOGO </div>
-        <div className={styles.Navbar__menu}>
-          <ul className={styles.Navbar__menu__items}>
-            <Link to="/locations">
-              <li>locations</li>
-            </Link>
-            <Link to="/about">
-              <li> about</li>
-            </Link>
-            <Link to="/contacts">
-              <li> contacts</li>
-            </Link>
-          </ul>
-        </div>
+        <div className={`${styles.Navbar_logo} column-1`}> LOGO </div>
+
+        <ul className={`${styles.menu__items} column-4`}>
+          <li>
+            {" "}
+            <Link to="/locations">locations</Link>
+          </li>
+
+          <li>
+            <Link to="/about">about</Link>
+          </li>
+
+          <li>
+            {" "}
+            <Link to="/contacts"> contacts</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/login"> Login</Link>
+          </li>
+        </ul>
+
         <div className={styles.Navbar_icons}>
-          <Link to="/">
-            <p>Home</p>
-          </Link>
+          <p>
+            {" "}
+            <Link to="/">
+              <AiTwotoneHome />
+            </Link>
+          </p>
         </div>
       </nav>
 

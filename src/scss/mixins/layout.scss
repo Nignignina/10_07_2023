@@ -1,0 +1,27 @@
+@use "sass:math";
+
+// $columnmargin: 12px;
+
+// // columns scheme
+// // FUNCTION
+// $columncount: 12;
+// @function column($col) {
+//   @return math.div(100%, $columncount) * $col;
+// }
+
+.col-1 {
+  width: column(1);
+}
+
+// MIXIN
+
+@mixin columns($col) {
+  @for $i from 1 through $col {
+    .column-#{$i} {
+      width: math.div(100%, $col) * $i;
+
+      height: fit-content;
+      background-color: aqua;
+    }
+  }
+}
